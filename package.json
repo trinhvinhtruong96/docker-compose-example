@@ -1,0 +1,12 @@
+{
+    "name": "docker-compose",
+    "version": "1.0.0",
+    "main": "index.js",
+    "repository": "https://github.com/trinhvinhtruong96/docker-compose-example.git",
+    "author": "Trinh Vinh Truong <trinhvinhtruong@gmail.com>",
+    "license": "MIT",
+    "scripts": {
+        "sql-up": "docker compose -f ./docker-compose-sql.yml up -d",
+        "postgres-up": "docker compose -f ./docker-compose-postgres.yml up -d"
+    }
+}

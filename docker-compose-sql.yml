@@ -1,0 +1,16 @@
+version: "3.3"
+services:
+  db:
+    image: mcr.microsoft.com/mssql/server:2022-latest
+    restart: always
+    volumes:
+      - sql-data:/var/lib/sql/data
+    environment:
+      ACCEPT_EULA: Y
+      MSSQL_SA_PASSWORD: password
+    ports:
+      - "1433:1433"
+
+volumes:
+  sql-data:
+    driver: local
